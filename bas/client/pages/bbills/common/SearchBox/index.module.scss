@@ -1,0 +1,23 @@
+.filterBox {
+  display: flex;
+  justify-content: space-around;
+}
+.filterText {
+  font-size: 12px;
+  padding: 3px;
+  cursor: pointer;
+}
+.active {
+  color: #fff;
+  background: #2784fc;
+  border-radius: 50%;
+}
+
+.filterTitle {
+  color: #bfbdbd;
+  margin: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+  padding: 0 20px;
+}

@@ -1,0 +1,99 @@
+.function.container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.function .card {
+  width: 100%;
+  color: $color-black;
+  height: 286px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.function .title {
+  margin-top: 0;
+  border-left: 5px solid $color-brand1-9;
+  line-height: 20px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.function .content {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.function .item {
+  width: 16.66666%;
+  height: 24px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+
+.function .itemTitle {
+  border: 1px dashed $color-brand1-9;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 12px;
+  text-overflow: ellipsis;
+  background-color: $color-brand1-1;
+}
+
+.function .count {
+  color: $color-error-3;
+}
+
+.function .dragdropcontext {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.dragtitle {
+  height: 40px;
+  border: 1px solid #CCCCCC;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,.1);
+}
+.dragtitle span {
+  text-align: center;
+  line-height: 40px;
+}
+.dragtitle span:nth-child(1){
+  width: 20%;
+  border-right: 1px solid #CCCCCC;
+}
+.dragtitle span:nth-child(2){
+  width: 80%;
+}
+
+.draggspan:nth-child(1){
+  text-align: center;
+  width: 20%;
+  border-right: 1px solid #CCCCCC;
+}
+.draggspan:nth-child(2){
+  width: 80%;
+  text-align: left;
+  padding-left: 10px;
+}
+.dragbody::-webkit-scrollbar {
+  display: none;
+}

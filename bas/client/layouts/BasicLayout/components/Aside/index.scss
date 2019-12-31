@@ -1,0 +1,160 @@
+.ice-layout {
+  .ice-design-layout-aside {
+    .next-nav,
+    .next-nav-sub-nav-item {
+      background: transparent;
+    }
+    .next-nav .next-nav-item.next-menu-item {
+      background: transparent;
+      color: #666;
+    }
+    .next-nav .next-menu-sub-menu .next-menu-item {
+      transition: none;
+
+      &.next-selected,
+      &:hover {
+        color: #2077ff; // 自定义样式
+        background: #cee1ff; // 自定义样式
+        border-radius: $corner-2;
+        .next-menu-item-text > a:before { // 自定义样式
+          width: 4px;
+          background: #2077ff;
+        }
+      }
+    }
+
+    .favoritesMenus {
+      .next-selected {
+        color: #2077ff !important; // 自定义样式
+        background: #cee1ff !important; // 自定义样式
+        border-radius: $corner-2;
+        &:hover {
+          color: #2077ff; // 自定义样式
+          background: #cee1ff; // 自定义样式
+          border-radius: $corner-2;
+          .next-menu-item-text > a:before { // 自定义样式
+            width: 4px;
+            background: #2077ff;
+          }
+        }
+      }
+      .next-menu-item-text {
+        display: flex;
+        align-items: center;
+      }
+      &.next-nav.next-ver .next-menu-item {
+        padding: 0 15px !important;
+      }
+    }
+
+    .text {
+      display: inline-block;
+      width: 70px;
+      text-align: justify;
+      text-align-last: justify;
+    }
+
+    .menu-btn {
+      position: fixed;
+      left: 0;
+      top: 82px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 0 6px 6px 0;
+      color: #fff;
+      background: #2077ff;
+      text-align: center;
+      cursor: pointer;
+      z-index: 9;
+      text-decoration: none;
+      &:hover {
+        color: #e7e7e7;
+      }
+    }
+  }
+  .toggle-sidebar-button {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 40px;
+    background: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 99;
+    & > span {
+      margin-left: 8px;
+    }
+    &:hover {
+      background: #eee;
+    }
+    &.iconOnly {
+      margin-left: 20px;
+      width: 60px;
+      padding: 0 20px;
+      text-align: center;
+    }
+  }
+}
+
+.next-tag-small.next-tag-closable > .next-tag-body {
+  padding-left: 3px !important;
+}
+.next-tag-small > .next-tag-close-btn {
+  padding-right: 3px !important;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .ice-layout {
+    .ice-design-layout-aside {
+      position: fixed;
+      left: -256px;
+      top: 0px;
+      bottom: 0;
+      padding: 0 20px;
+      background: #2e323e !important;
+      z-index: 9999;
+    }
+
+    .open-drawer {
+      transform: translateX(256px);
+      .logo {
+        width: 200px;
+        margin: 20px 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//导航栏样式
+.next-nav.next-ver .next-menu-item-inner, .next-nav.next-hoz .next-menu-item-inner {
+  font-size: 14px !important;
+}
+
+.next-select .next-select-inner, .next-menu {
+  min-width: 60px !important;
+}
+
+.externa-link {
+  margin-left: 10px;
+}
+.externa-link:hover {
+  color: #4387f3 !important;
+}
+
+.ice-field-control {
+  display: flex;
+  align-items: center;
+}
+.ice-field-tips {
+  margin-left: 10px;
+}
+
+.caseBreakpointsTimeLine>li:first-child .next-timeline-item-node, .caseBreakpointsTimeLine>li:last-child .next-timeline-item-node {
+  display: none;
+}

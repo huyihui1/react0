@@ -1,0 +1,93 @@
+.GridRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.GridColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.LeftSideGridContainer {
+  flex: 0 0 75px;
+  z-index: 10;
+}
+
+.LeftSideGrid {
+  overflow: hidden !important;
+}
+.HeaderGrid {
+  width: 100%;
+  overflow: hidden !important;
+}
+.BodyGrid {
+  width: 100%;
+}
+
+.evenRow {
+}
+.oddRow {
+  background-color: #e0e0e0;
+}
+.redRow{
+  height: 40px;
+  width: 50px;
+  background-color: rgb(244, 67, 54);
+}
+.greenRow{
+  height: 40px;
+  width: 50px;
+  background-color: rgb(76, 175, 80);
+}
+.cell,
+.headerCell,
+.leftCell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 .5em;
+}
+.headerCell,
+.leftCell {
+  font-weight: bold;
+}
+
+.ReactVirtualized__Table__headerRow {
+  border-bottom: 1px solid #ccc;
+}
+
+.ReactVirtualized__Table__headerRow, .ReactVirtualized__Table__headerColumn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+
+.ReactVirtualized__Table__headerColumn {
+  justify-content: center;
+}
+
+.ReactVirtualized__Table__headerTruncatedText {
+  white-space: normal;
+  text-align: center;
+
+}
+
+.ReactVirtualized__Table__rowColumn {
+  text-align: center;
+  white-space: normal;
+  text-overflow: initial;
+  word-wrap:break-word;
+  font-size: 12px;
+  /*flex: 0 0 auto !important;*/
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: #eeeeee;
+}

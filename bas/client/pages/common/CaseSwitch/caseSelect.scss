@@ -1,0 +1,5 @@
+.caseList:hover {
+  box-shadow: 0px 6px 20px rgba(36,37,38,.13);
+  transform: translateY(-10px);
+  transition: box-shadow .25s ease,transform .25s ease;
+}

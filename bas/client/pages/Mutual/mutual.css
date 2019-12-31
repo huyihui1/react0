@@ -1,0 +1,78 @@
+.mutual-box {
+  position: relative;
+  min-height: 500px;
+}
+
+.mutual-box .mutual-item {
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: row;*/
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.mutual-item-4 {
+  flex: 0 0 40%;
+  width: 40%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px #ccc;
+  overflow-y: auto;
+}
+
+.mutual-item-6 {
+  flex: 0 0 59%;
+  width: 59%;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px #ccc;
+  overflow-y: auto;
+}
+
+.mutual-item-10 {
+  flex: 0 0 100%;
+  width: 100%;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.item-wrap {
+  height: 90%;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: space-between;
+}
+
+.item-wrap .next-table-header, .item-wrap .next-table-body {
+  font-size: 12px;
+}
+
+.item-flex-6 {
+  flex: 0 0 59%;
+}
+
+.item-flex-4 {
+  flex: 0 0 40%;
+}
+.item-flex-10 {
+  flex: 0 0 100%;
+}
+
+#item-wrap .next-table td .next-table-cell-wrapper {
+  padding: 12px 8px;
+}
+
+/*.numA {*/
+  /*background-color: #f5efaf;*/
+/*}*/
+/*.numB {*/
+  /*background-color: #fff;*/
+/*}*/
+
+.icePBAnalyzeList th .next-table-cell-wrapper {
+  padding: 12px 4px !important;
+}
+.icePBAnalyzeList td .next-table-cell-wrapper {
+  padding: 0 5px !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+}

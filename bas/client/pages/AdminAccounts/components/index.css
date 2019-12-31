@@ -1,0 +1,27 @@
+.ReactPasswordStrength-input {
+  width: 100%;
+  height: 30px;
+  padding: 14px 0 12px 8px !important;
+  font-size: 14px !important;
+}
+
+.ReactPasswordStrength-strength-desc {
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.ReactPasswordStrength-input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #e2e2e2;
+  /* placeholder字体大小  */
+  font-size: 14px;
+  /* placeholder位置  */
+  /*text-align: right;*/
+}
+
+input {
+  font-family: none;
+}

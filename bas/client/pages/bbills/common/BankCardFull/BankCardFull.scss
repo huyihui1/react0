@@ -1,0 +1,136 @@
+.rccs {
+  margin: 0 auto;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  min-width: 350px;
+}
+
+.rccs__card {
+  height: 182.873px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  min-width: 350px;
+}
+
+.rccs__card--front {
+  z-index: 20;
+}
+
+.rccs--filled {
+  opacity: 0.8 !important;
+}
+
+.rccs__number {
+  clear: both;
+  font-family: Consolas, Courier, monospace;
+  font-size: 20px;
+  left: 10%;
+  position: absolute;
+  top: 45%;
+}
+
+.rccs__name {
+  bottom: 15%;
+  font-family: Consolas, Courier, monospace;
+  font-size: 17px;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  width: 60%;
+}
+
+.rccs__number, .rccs__name, .rccs__expiry, .rccs__cvc {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.rccs__expiry {
+  bottom: 15%;
+  font-size: 0;
+  line-height: 1;
+  position: absolute;
+  right: 10%;
+}
+
+.rccs__expiry__valid {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.rccs__expiry > * {
+  vertical-align: middle;
+}
+
+.rccs__expiry__value {
+  font-family: Consolas, Courier, monospace;
+  font-size: 16px;
+}
+
+.rccs__chip {
+  background-image: url(../img/xinpian.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 26.36364px;
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  width: 41.42857px;
+}
+
+.rccs__card--front, .rccs__card--back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: linear-gradient(25deg, #939393, #717171);
+  border-radius: 14.5px;
+  color: #fff;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.rccs__issuer {
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 23%;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 70px;
+}
+
+.rccs__card--unionpay .rccs__issuer {
+  background-image: url('../img/unionPay.svg');
+}
+
+.rccs_bank_name {
+  position: absolute;
+  left: 22%;
+  top: 8%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.rccs_bank_name div {
+  margin-right: 5px;
+}
+.rccs_bank_name img {
+  width: 32px;
+  height: 32px;
+}
+

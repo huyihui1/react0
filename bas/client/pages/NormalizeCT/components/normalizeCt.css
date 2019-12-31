@@ -1,0 +1,16 @@
+.normalizect {
+
+}
+
+.normalize_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.normalize_left .owner{
+
+}
+.normalize_left .peer{
+  margin: 15px 0;
+}

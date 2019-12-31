@@ -1,0 +1,4 @@
+.hidenBlock .container-block{
+  visibility: hidden;
+  margin-bottom: 0!important
+}

@@ -1,0 +1,10 @@
+{
+        "workbench.activityBar.visible": true,
+        "editor.renderControlCharacters": true,
+        "breadcrumbs.enabled": true,
+        "window.menuBarVisibility": "default",
+        "workbench.settings.openDefaultSettings": true,
+        "window.enableMenuBarMnemonics": false,
+        "window.zoomLevel": 0
+    
+}

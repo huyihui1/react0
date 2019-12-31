@@ -1,0 +1,28 @@
+.AduitLogs_header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.AduitLogs_operator {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+.AduitLogs_operator span:nth-child(1){
+  margin-right: 8px;
+}
+.AduitLogs_date {
+  width: 380px;
+}
+.AduitLogs_date > span:nth-child(1){
+  margin-right: 8px;
+}
+.AduitLogs_search {
+  margin-left: 25px;
+}
+.AduitLogs_list {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+}

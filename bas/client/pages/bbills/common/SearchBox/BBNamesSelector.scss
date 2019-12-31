@@ -1,0 +1,8 @@
+.nameBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.nameBox li {
+  flex: 0 0 30%;
+}

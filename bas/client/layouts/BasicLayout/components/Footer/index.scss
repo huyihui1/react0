@@ -1,0 +1,28 @@
+.ice-design-layout-footer {
+  width: 100%;
+  height: 45px;
+  //padding: 20px 0;
+  .ice-design-layout-footer-body {
+    //margin: 20px auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .copyright {
+      color: #666;
+      line-height: 1.5;
+      font-size: 12px;
+      text-align: left;
+    }
+    .copyright-link {
+      color: #666;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

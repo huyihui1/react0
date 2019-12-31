@@ -1,0 +1,18 @@
+.licenses_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.licenses_left .next-upload-list {
+  width: 300px;
+  overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

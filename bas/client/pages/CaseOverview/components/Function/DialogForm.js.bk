@@ -1,0 +1,175 @@
+import React, {Component} from 'react';
+import {Dialog} from '@alifd/next';
+import {connect} from 'react-redux';
+import {actions as caseOverviewActions} from '../../../../stores/caseOverview'
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {bindActionCreators} from "redux";
+
+
+// const getItems = count =>
+//   Array.from({length: count}, (v, k) => k).map(k => ({
+//     id: `item-${k}`,
+//     content: `item ${k}`
+//   }));
+
+// a little function to help us with reordering the result
+const reorder = (list, startIndex, endIndex) => {
+  const result = Array.from(list);
+  const [removed] = result.splice(startIndex, 1);
+  result.splice(endIndex, 0, removed);
+
+  return result;
+};
+
+const grid = 8;
+
+const getItemStyle = (isDragging, draggableStyle) => ({
+  // some basic styles to make the items look a bit nicer
+  userSelect: "none",
+  height: '40px',
+  'lineHeight': '40px',
+
+  // change background colour if dragging
+
+  border: '1px solid #ccc',
+  display: 'flex',
+  'marginTop': '-1px',
+  // styles we need to apply on draggables
+  ...draggableStyle
+});
+
+const getListStyle = isDraggingOver => ({
+  background: 'white',
+  width: 850,
+  overflow: 'auto',
+  height: '300px',
+  'borderBottom': '1px solid #ccc'
+});
+
+
+class DialogForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+    };
+    this.onClose = this.onClose.bind(this);
+    this.onDragEnd = this.onDragEnd.bind(this);
+    this.onOk = this.onOk.bind(this);
+  }
+
+
+  onClose() {
+    // console.log(reason);
+    const {onOpen} = this.props;
+    onOpen(false);
+
+    this.setState({
+      visible: false
+    });
+  };
+
+  onOk() {
+    const actions = this.props.actions;
+    const {getMenusAllData} = this.props;
+    actions.setMenusCaseOverview({menus: this.state.items}).then(res => {
+      getMenusAllData(res.body.data);
+      this.onClose()
+    })
+  }
+
+
+  onDragEnd(result) {
+    // dropped outside the list
+    // console.log(result);
+    if (!result.destination) {
+      return;
+    }
+
+    const items = reorder(
+      this.state.items,
+      result.source.index,
+      result.destination.index
+    );
+
+    this.setState({
+      items
+    });
+  }
+
+  componentDidMount() {
+    const actions = this.props.actions;
+    const {getMenusAllData} = this.props;
+    actions.getMenusAllCaseOverview().then(res => {
+      this.setState({items: res.body.data});
+      getMenusAllData(res.body.data)
+    })
+  }
+
+  render() {
+    const {visible} = this.props;
+    return (
+      <div>
+        <Dialog
+          title="设置常用菜单"
+          visible={visible}
+          onOk={this.onOk}
+          onCancel={this.onClose.bind(this, 'cancelClick')}
+          onClose={this.onClose}>
+          <div className="dragdropcontext">
+            <DragDropContext onDragEnd={this.onDragEnd}>
+              <div className="dragtitle">
+                <span>菜单</span>
+                <span>说明</span>
+              </div>
+              <Droppable droppableId="droppable">
+                {(provided, snapshot) => (
+                  <div
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                    style={getListStyle(snapshot.isDraggingOver)}
+                    className="dragbody"
+                  >
+                    {this.state.items.map((item, index) => (
+                      <Draggable key={item.memo} draggableId={item.memo} index={index}>
+                        {(provided, snapshot) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                            style={getItemStyle(
+                              snapshot.isDragging,
+                              provided.draggableProps.style
+                            )}
+                          >
+                            <span className="draggspan">{item.label}</span>
+                            <span className="draggspan">{item.memo}</span>
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+            </DragDropContext>
+          </div>
+        </Dialog>
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    caseId: state.cases.case.id,
+  }
+};
+
+export default connect(
+  mapStateToProps,
+
+  dispatch => ({
+    actions: bindActionCreators(caseOverviewActions, dispatch),
+  })
+)(DialogForm);

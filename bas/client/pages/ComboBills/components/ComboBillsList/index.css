@@ -1,0 +1,18 @@
+.comboBills .ReactVirtualized__Table__row .ReactVirtualized__Table__rowColumn {
+  text-align: center !important;
+}
+
+.comboBills .ReactVirtualized__Table__row .ReactVirtualized__Table__rowColumn:nth-child(10) {
+  text-align: right !important;
+  margin-right: 0;
+}
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.yellow {
+  color: #b99c05;
+}

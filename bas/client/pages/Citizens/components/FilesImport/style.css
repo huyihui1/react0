@@ -1,0 +1,19 @@
+.next-upload-drag.fileUpload{
+  width: auto;
+  height: 186px;
+}
+.next-upload-drag.fileUpload .next-upload-select-picture-card{
+  width: 150px;
+  height: 150px;
+}
+.next-upload-drag.fileUpload .next-upload-list-picture-card .next-upload-list-item{
+  width: 150px;
+  height: 150px;
+}
+.next-upload-select-picture-card .next-icon{
+  margin-top: 45px;
+}
+
+#citizensImp .next-icon.next-icon-close.next-large {
+  display: block;
+}

@@ -1,0 +1,90 @@
+.warning.container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.warning .card {
+  width: 100%;
+  color: $color-black;
+  height: 286px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  background-color: $color-white;
+}
+
+.warning .title {
+  margin-top: 0;
+  border-left: none;
+  line-height: 20px;
+  padding-left: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.warning .title > div:nth-child(1) {
+  border-left: 5px solid $color-brand1-6;
+  padding-left: 10px;
+}
+
+.warning .content {
+  height: 200px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 56px;
+  justify-content: space-between;
+}
+
+.warning .item {
+  width: 20%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.warning .image {
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.warning .itemTitle {
+  font-size: 12px;
+  text-align: center;
+}
+
+.warning .iconImage {
+  width: 30px;
+  height: 30px;
+}
+
+.warning .count {
+  top: -6px;
+  color: $color-white;
+  width: 18px;
+  right: -6px;
+  height: 18px;
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  background-color: $color-error-3;
+}
+.warning .next-table th .next-table-cell-wrapper{
+  background-color: #EBECF0;
+}
+.warning .next-table-body{
+  max-height: 153px !important;
+}

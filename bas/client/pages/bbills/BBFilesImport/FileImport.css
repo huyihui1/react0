@@ -1,0 +1,32 @@
+.fileImport .next-upload{
+  display: flex;
+}
+
+.fileImport .next-upload-list.next-upload-list-text {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.fileImport .next-upload-drag {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#fileTable .next-table th .next-table-cell-wrapper {
+  padding: 0;
+}
+#fileTable .next-table td .next-table-cell-wrapper {
+  padding: 12px 0 !important;
+}
+
+#fileTable .next-table-body {
+  font-size: 12px;
+}
+
+#fileTable .next-table-cell.next-table-header-node {
+  display: table-cell;
+  vertical-align: bottom;
+}

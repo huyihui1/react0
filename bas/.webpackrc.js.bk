@@ -1,0 +1,77 @@
+const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const BuildType = process.argv.splice(2)[0];
+let plugins = [];
+let entry = () => {
+  if (BuildType == 'cas') {
+    plugins.push(
+      new HtmlWebpackPlugin({
+      title: 'cas',
+      chunks: ['vendor', 'cas'],
+      template: resolve('client/cas/index.html'),
+      filename: 'cas/index.html',
+    })
+    )
+    return {
+      "cas": "client/cas/index.js"
+    }
+  } else if (BuildType == 'tas') {
+    plugins.push(
+      new HtmlWebpackPlugin({
+        title: 'tas',
+        chunks: ['vendor', 'tas'],
+        template: resolve('client/tas/index.html'),
+        filename: 'tas/index.html',
+      })
+    )
+    return {
+      "tas": "client/tas/index.js"
+    }
+  }else {
+    plugins.push(
+      new HtmlWebpackPlugin({
+        title: 'index',
+        chunks: ['vendor', 'index'],
+        template: resolve('client/index.html'),
+        filename: 'index.html',
+      }),
+      // new HtmlWebpackPlugin({
+      //   title: 'cas',
+      //   chunks: ['vendor', 'cas'],
+      //   template: resolve('client/cas/index.html'),
+      //   filename: 'cas/index.html',
+      // }),
+      // new HtmlWebpackPlugin({
+      //   title: 'tas',
+      //   chunks: ['vendor', 'tas'],
+      //   template: resolve('client/tas/index.html'),
+      //   filename: 'tas/index.html',
+      // })
+    )
+    return {
+      "index": "client/index.js",
+      // "cas": "client/cas/index.js",
+      // "tas": "client/tas/index.js"
+    }
+  }
+}
+module.exports = {
+  entry: entry(),
+  output: {
+    path: resolve('dist'),
+    filename: '[name].[hash].js',
+  },
+  plugins: plugins,
+  // devServer: {
+  //   before(app) {
+  //     app.use(function(req, res, next) {
+  //       // 重定向 html 的请求到 /build/ dev 服务上
+  //       if (req.url === '/' || req.path.endsWith('.html')) {
+  //         req.url = '/build' + req.url;
+  //       }
+  //       next();
+  //     });
+  //   },
+  // },
+};

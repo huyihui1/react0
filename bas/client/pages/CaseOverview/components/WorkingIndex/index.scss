@@ -1,0 +1,31 @@
+.workingIndex.container {
+  width: 60%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.workingIndex .card {
+  width: 100%;
+  color: $color-black;
+  height: 355px;
+  padding: 20px;
+  //overflow-y: auto;
+  position: relative;
+  font-size: 16px;
+  border-radius: 16px;
+  background-color: $color-white;
+}
+.workingIndex .title {
+  margin: 0 0 20px;
+  border-left: 5px solid $color-brand1-6;
+  line-height: 20px;
+  padding-left: 10px;
+}
+.workingIndex .charts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#mapChart > div > canvas:hover {
+  cursor: pointer;
+}

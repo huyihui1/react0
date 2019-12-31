@@ -1,0 +1,58 @@
+.GlobalLabel {
+  position: fixed;
+  width: 85%;
+  height: 100%;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+   background: #ffffff; 
+  z-index: 1000;
+  padding: 30px 20px;
+  border-left: 1px solid #eee;
+  margin-right: -100%;
+  transition: all .3s;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, .2);
+}
+.GlobalLabel::-webkit-scrollbar {
+  display: none;
+}
+.GlobalLabel-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.GlobalLabel-close2 {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  padding: 5px 15px;
+  background: #eee;
+  z-index: 999;
+}
+
+.GlobalLabel.show {
+  animation: showBox .3s forwards;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes showBox {
+  0% {
+    margin-right: -100%;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+#bbWindowScroller {
+  position: relative;
+  letter-spacing: normal;
+}
+#bbWindowScroller .ReactVirtualized__Grid.ReactVirtualized__Table__Grid::-webkit-scrollbar {
+  display: none !important;
+}

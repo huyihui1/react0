@@ -1,0 +1,13 @@
+.translateX-200 {
+  position: absolute;
+  top: 0;
+  min-width: 360px;
+  transform: translateX(200%);
+  height: 94%;
+  z-index: 999;
+}
+
+.translateX-0 {
+  transform: translateX(0);
+  transition: all .3s .2s;
+}

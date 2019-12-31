@@ -1,0 +1,16 @@
+.pbills_header {
+  margin: 20px;
+  position: relative;
+}
+
+.pbills_body {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.pbills_body .next-table-lock-right {
+  /*height: 500px;*/
+  /*right: 15px !important;*/
+}

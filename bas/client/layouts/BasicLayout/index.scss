@@ -1,0 +1,279 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body, .next-btn.next-medium {
+  font-size: 14px !important;
+}
+
+h2 {
+  font-size: 18px !important;
+}
+
+.ice-layout-main {
+  color: #666;
+}
+
+.ice-layout .ice-design-layout-aside .next-nav .next-menu-sub-menu .next-menu-item.next-selected, .ice-layout .ice-design-layout-aside .next-nav .next-menu-sub-menu .next-menu-item:hover {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.next-btn.next-medium {
+  padding: 0 16px;
+  height: 28px;
+  line-height: 26px;
+}
+
+.next-table th {
+  background: #ffffff;
+  color: #999;
+}
+
+.next-table-body, .next-table-header {
+  font-size: 14px;
+}
+
+.next-progress-line-show-info .next-progress-line-text {
+  color: #999;
+}
+
+.next-message.next-medium .next-message-content, .next-dialog-body {
+  font-size: 14px;
+}
+
+.next-dialog-header {
+  background: #f4f4f4;
+}
+
+.next-btn.next-medium {
+  height: 32px;
+  line-height: 30px;
+}
+
+.next-table th, .next-table td {
+  border: 1px solid #EEEFF3;
+}
+
+.ice-design-layout-light.ice-design-layout { // 自定义样式
+  background-image: url(https://img.alicdn.com/tfs/TB1GsHCd8fH8KJjy1XbXXbLdXXa-1680-370.png);
+  background-color: #fafafa;
+}
+
+.ice-design-layout-light {
+  &.ice-design-layout {
+    min-height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .ice-layout {
+    width: 100%;
+    padding: 0 20px;
+    background: transparent;
+  }
+
+  .ice-layout-main {
+    padding: 0 0 0 20px;
+  }
+
+  .ice-layout-section {
+    margin: 20px 0 0;
+  }
+  .next-upload-list-item.next-upload-list-item-error.next-upload-list-item-error-with-msg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .next-upload-list-text .next-upload-list-item-error.next-upload-list-item-error-with-msg {
+    line-height: 14px;
+  }
+
+  .setting-theme {
+    position: fixed;
+    margin-bottom: 0;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background: #3080fe;
+    right: 0;
+    top: 82px;
+    width: 80px;
+    height: 40px;
+    border-radius: 6px 0 0 6px;
+    z-index: 999;
+  }
+}
+
+svg.svg-inline--fa {
+  margin-right: 8px;
+}
+
+.next-input.next-medium {
+  border-radius: 4px;
+}
+
+.next-btn.next-large {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.next-btn.next-medium {
+  border-radius: 50px;
+}
+
+.next-nav.next-normal {
+  font-weight: 700;
+}
+
+.next-nav.next-ver .next-menu-item-inner, .next-nav.next-hoz .next-menu-item-inner {
+  font-size: 12px;
+}
+
+//  模态框
+.container-block {
+  margin-bottom: 0 !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
+
+// 隐藏文件上传关闭按钮
+.next-icon.next-icon-close.next-large {
+  display: none;
+}
+
+.next-select-multiple.next-medium .next-tag, .next-select-tag.next-medium .next-tag {
+  letter-spacing: 0;
+}
+
+.next-input.next-small input {
+  font-size: 18px;
+}
+
+.next-select .next-select-inner, .next-menu {
+  min-width: 70px;
+}
+
+.next-tag > .next-tag-body {
+  overflow: initial;
+}
+
+.highlightCode {
+  color: red;
+  font-weight: bold;
+}
+
+.deleteBtn {
+  margin: 0 8px;
+  letter-spacing: 2px;
+  background-color: #ff3000 !important;
+  color: #ffffff !important;
+}
+
+.tous {
+  .cases {
+    color: black;
+    margin: 18px 0 5px 0;
+    display: block;
+    font-size: 16px
+  }
+
+  .keypoint {
+    color: black;
+    margin: 18px 0 5px 0;
+    display: block;
+    font-size: 16px
+  }
+
+  .suggestion {
+    color: black;
+    margin: 18px 0 5px 0;
+    display: block;
+    font-size: 16px
+  }
+  div {
+    line-height: 23px;
+  }
+}
+.tourIcon {
+  color: #a3bbf3;
+}
+.handsontable th {
+  white-space: normal!important;
+}
+
+.handsontable th div{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s;
+  z-index: -1;
+  background: #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#top.show {
+  opacity: 1;
+  bottom: 20px;
+  z-index: 499;
+}
+
+
+#top svg {
+  padding: 5px;
+}
+
+// range 组件 tooltip背景色
+.next-balloon-tooltip, .next-balloon-tooltip:after {
+  background: #a5b6c3;
+}
+
+.handsontable .htDimmed {
+  color: #333333;
+}
+
+.next-timeline-item-content {
+  position: relative;
+}
+
+.customTimeLineCount {
+  position: absolute;
+  top: -20px;
+}
+
+//气泡框 层级
+.next-balloon.next-balloon-normal.next-balloon-medium.next-balloon-right.next-overlay-inner {
+  z-index: 499 !important;
+}
+
+//handsontable 表格title 层级
+#scrollTitle {
+  z-index: 499 !important;
+}
+
+.next-input.next-medium.next-select-inner {
+  align-items: center;
+}

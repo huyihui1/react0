@@ -1,0 +1,53 @@
+.shortInput input {
+  text-align: center;
+}
+
+.chartControls {
+  position: absolute;
+  display: flex;
+  width: 60px;
+  justify-content: space-around;
+  right: 10px;
+  top: 40px;
+  z-index: 99;
+}
+.chartControls > div {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  color: #3080FE;
+  border: 1px solid #3080FE;
+  text-align: center;
+  /*line-height: 20px;*/
+  cursor: pointer;
+}
+.chartControls > div:hover {
+  color: #fff;
+  background: #1861D5;
+}
+
+.numberFilter {
+  position: absolute;
+  width: 250px;
+  top: 20px;
+  right: 100px;
+  z-index: 99;
+}
+
+.noSelect {
+
+  -webkit-touch-callout: none; /* iOS Safari */
+
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+
+  -khtml-user-select: none; /* Konqueror */
+
+  -moz-user-select: none; /* Firefox */
+
+  -ms-user-select: none; /* Internet Explorer/Edge */
+
+  user-select: none; /* Non-prefixed version, currently
+
+not supported by any browser */
+
+}

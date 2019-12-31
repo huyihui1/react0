@@ -1,0 +1,155 @@
+.calltrack-box {
+  display: flex;
+  flex-direction: row;
+  /*height: 300px;*/
+}
+
+.calltrack-box .calltrack-list {
+  flex: 0 0 25%;
+  margin-left: 5px;
+  overflow-y: auto;
+  background-color: #eeeeee;
+}
+
+.calltrack-box .calltrack-map {
+  flex: 0 0 75%;
+  position: relative;
+}
+ .calltrack-title {
+  background: #ffffff;
+   padding: 5px;
+}
+ .calltrack-list .calltrack-list-title {
+   position: relative;
+   cursor: pointer;
+   padding: 5px;
+   background: #eee;
+   z-index: 10;
+ }
+ .next-balloon {
+   max-width: initial !important;
+ }
+ .calltrack-list .calltrack-list-body {
+   padding: 0 15px;
+   transition: all .3s;
+   background: #ffffff;
+ }
+.calltrack-list .calltrack-list-body::-webkit-scrollbar {
+   display: none !important;
+ }
+.calltrack-list-body svg.svg-inline--fa {
+  margin-right: 0;
+}
+ .calltrack-list-body.hide {
+   overflow: hidden;
+   max-height: 0;
+ }
+ .calltrack-list-body li {
+   padding: 5px;
+ }
+.calltrack-list-body li:hover {
+  background: #ffd500;
+}
+ .calltrack-list-body li.active {
+  background: orange;
+}
+ .calltrack-list-body li.highlight {
+   background: #c5f9c5;
+ }
+.calltrack-list-body li.highlight:hover {
+  background: #4ff28e;
+}
+.calltrack-list-body li.highlight.active {
+  background: #66d153;
+}
+#calltrackMap {
+  height: 100%;
+  /*min-height: 500px;*/
+}
+
+.calltrack-map .calltrack-list {
+  position: absolute;
+  top: 0;
+  left: -200%;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  z-index: 1005;
+  animation: move .3s forwards;
+}
+
+@keyframes move {
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
+
+.calltrack-body{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: white;
+  padding: 0 20px;
+}
+.calltrack-body > div{
+  width: 120px;
+  float: left;
+  text-align: center;
+}
+.calltrack-body > div:last-child {
+  /*float: right;*/
+  /*width: 300px;*/
+  /*text-align: right;*/
+}
+.calltrack-body .next-select-trigger, .calltrack-body .next-select .next-select-inner, .next-menu {
+  min-width: 55px;
+}
+
+
+.calltrack-box .automatic {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  z-index: 1000;
+  color: white;
+  background-color: rgb(142, 168, 224);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.calltrack-box .automatic .fa-play-circle {
+  width: 100%;
+  height: 100%;
+}
+.calltrack-map .current {
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: white;
+  background-color: rgb(142, 168, 224);
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: 500;
+}
+.checkboxInput {
+  vertical-align: middle;
+}
+
+.fixedTop {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}

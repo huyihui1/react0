@@ -1,0 +1,48 @@
+.bb-analyze .ReactVirtualized__Table__row .ReactVirtualized__Table__rowColumn {
+  text-align: center;
+}
+
+.bb-analyze .ReactVirtualized__Table__row .ReactVirtualized__Table__rowColumn:nth-child(11) {
+  text-align: right;
+  margin-right: 0;
+}
+
+.bb-analyze .ReactVirtualized__Table__rowColumn:nth-child(1), .ReactVirtualized__Table__rowColumn:nth-child(9) {
+  overflow: initial !important;
+}
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.yellow {
+  color: #b99c05;
+}
+.green {
+  color: green;
+}
+
+.arrowBox {
+  position: absolute;
+  text-align: right;
+  top: 35px;
+  right: -61px;
+  z-index: 500;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.arrowBox.fixedArrowBox {
+  position: fixed;
+  top: 20px;
+  right: -43px;
+}
+
+.arrowBox.fixedArrowBox:hover {
+  right: 0;
+}
+.arrowBox:hover {
+  right: -19px;
+}

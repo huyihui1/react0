@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>redux原理</title>
+</head>
+<body>
+    <div>
+        <button  onclick = "store.dispatch({type: 'JIAN',n:2})">-</button>
+        <span id="countDisplay">10</span>
+        <button onclick = "store.dispatch({type: 'JIA',n:3})">+</button>
+    </div>
+    <script src="https://cdn.bootcss.com/redux/4.0.4/redux.min.js"></script>
+    <script>
+        const countDisplay = document.querySelector('#countDisplay')
+        const countState ={
+            count:5
+        }
+        // const renderCount = (state) =>{
+        //     countDisplay.innerHTML = state.count
+        // }
+        // renderCount(countState)
+
+        // const jian = (n) =>{
+        //     countState.count = countState.count -n
+        //     renderCount(countState)
+        // }
+        const changeState = (state,action) =>{//状态 state其实就是数据
+            if (!state){
+                return countState
+            }
+            switch (action.type) {
+                case 'JIAN':
+                   return {
+                       ...state,
+                       count: state.count - action.n
+                   }
+                   break;
+                   case 'JIA':
+                        return {
+                            ...state,
+                            count: state.count +action.n
+                        }
+                   break;
+                   default:
+                   break;
+            }
+        }
+        // const dispatch = (action) =>{
+        //     changeState(action)
+        //     renderCount(countState)
+        // }
+
+           const createStore = (changeState) =>{
+            let state = null
+            const getState = () => state
+            const listeners = []
+            const subscribe = (listener) => {
+                listeners.push(listener)
+            }
+            const dispatch = (action) => {
+                 state = changeState(state, action)
+                listeners.forEach( listener => listener())
+            }
+            // dispatch({
+
+            // })
+                return {
+                    getState,
+                    dispatch,
+                    subscribe
+            }
+        }
+        const store = createStore(changeState)
+        console.log(store.getState())
+        const renderCount = () =>{
+            countDisplay.innerHTML = store.getState().count
+        }
+        renderCount()
+        store.subscribe(renderCount)
+    </script>
+</body>
+</html>
